@@ -25,3 +25,14 @@ on: [push]
 
         - name: Apply Terraform Changes
           run: terraform apply -auto-approve
+
+      run-windows-commands:
+        runs-on: windows-latest
+
+        steps:
+          -name: Directory
+           run: Get-Location
+
+          -name: Directory bash
+           run: pwd
+           shell: bash
